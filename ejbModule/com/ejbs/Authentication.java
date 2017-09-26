@@ -127,4 +127,9 @@ public class Authentication implements AuthenticationRemote{
 		return true;
 	}
 	
+	@Override
+	public String hashValue(String value) throws NoSuchAlgorithmException, InvalidKeySpecException {
+		return Util.generateStorngPasswordHash(value);
+	}
+	
 }

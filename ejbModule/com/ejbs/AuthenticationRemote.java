@@ -17,5 +17,6 @@ public interface AuthenticationRemote {
 	public Utilisateur getUserFormEmail(String email);
 	public boolean emailExists(String email);
 	public boolean updateUserPassword(Long id,String password) throws NoSuchAlgorithmException, InvalidKeySpecException;
+	String hashValue(String value) throws NoSuchAlgorithmException, InvalidKeySpecException;
 
 }
